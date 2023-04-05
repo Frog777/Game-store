@@ -1,0 +1,29 @@
+.features
+    padding: 15rem 0
+    background-color: $color-gray-light
+    grid-column: center-start / center-end
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr))
+    grid-template-rows: min-content min-content
+    row-gap: 3rem
+    column-gap: 4rem
+    @include respond(phone)
+        padding: 5rem 0
+
+.feature
+    display: grid
+    grid-template-columns: min-content 1fr
+    grid-template-rows: max-content
+    gap: 1.5rem 2.4rem
+    align-items: start
+    &__icon
+        transform: translateY(-1rem)
+        width: 4.5rem
+        height: 4.5rem
+        grid-row: 1 / span 2
+    &-text
+        font-size: 1.6rem
+        font-weight: 400
+        line-height: 113%
+        color: $color-green-dark
+

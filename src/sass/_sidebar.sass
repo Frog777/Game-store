@@ -1,0 +1,28 @@
+.sidebar
+    position: relative
+    background-color: $color-green-light
+    grid-column: sidebar-start / sidebar-end
+    grid-row: 1 / -1
+    padding-top: 3.7rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        grid-row: 1 / 1
+        grid-column: full-start/ full-end
+        justify-content: end
+        padding-right: 3.7rem
+    &__gam
+        border: none
+        background-color: $color-gray-light
+        height: .2rem
+        width: 4.5rem
+        &::before, &::after
+            content: ""
+            background-color: $color-gray-light
+            height: .2rem
+            width: 4.5rem
+            display: block   
+        &::before
+            transform: translateY(-1.5rem)
+        &::after
+            transform: translateY(1.5rem)

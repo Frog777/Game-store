@@ -1,0 +1,47 @@
+.header
+    background-color: $color-blue-dark
+    grid-column: full-start / col-end 6
+
+    display: grid
+    grid-template-rows: 1fr min-content minmax(10rem , min-content) 1fr
+    padding: 5rem 6rem
+    background: url(../img/header.png) center / cover no-repeat
+    @include respond(tab-port)
+        grid-column: full-start / full-end
+
+    &__btn
+        justify-self: start
+        align-self: start
+    &__line-text
+        margin-bottom: 1.3rem
+        font-weight: bold
+        font-size: 1.6rem
+        color: $color-gray-light
+        display: grid
+        grid-template-columns: 1fr max-content 1fr
+        gap: 1rem
+        align-items: center
+        &::before, &::after
+            content: ""
+            display: block
+            height: .1rem
+            background-color: $color-gray-dark
+            transform: translateY(50%)
+    &__img
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 20rem))
+        justify-items: center
+        justify-content: center
+        
+    &__img img
+        height: 2.5rem
+        filter: brightness(70%)
+        @include respond(phone)
+            height: 1.5rem
+.logo
+    display: block
+    padding-bottom: 8rem
+    &__img
+        display: block
+        margin: 0 auto
+
